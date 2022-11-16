@@ -1,6 +1,5 @@
 <resources>
 
     <string name="app_name">My Challenge Project</string>
-    <string name="endpoint_posts" translatable="false">https://my-json-server.typicode.com/SharminSirajudeen/test_resources/posts</string>
-    <string name="endpoints_users" translatable="false">https://my-json-server.typicode.com/SharminSirajudeen/test_resources/users</string>
+    <string name="retrofit_endpoint" translatable="false">https://my-json-server.typicode.com/</string>
 </resources>
