@@ -9,6 +9,6 @@ class ChallengeApplication : Application() {
         super.onCreate()
 
         Timber.plant(Timber.DebugTree())
-        Timber.i("Application: Initializing")
+        Timber.i("Initialized")
     }
 }
