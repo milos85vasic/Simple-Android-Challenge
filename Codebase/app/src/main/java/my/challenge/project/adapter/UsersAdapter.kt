@@ -1,10 +1,12 @@
 package my.challenge.project.adapter
 
+import android.content.Intent
 import android.view.LayoutInflater
 import android.view.ViewGroup
 import androidx.recyclerview.widget.RecyclerView
 import com.bumptech.glide.Glide
 import my.challenge.project.R
+import my.challenge.project.activity.PostsActivity
 import my.challenge.project.provider.Data
 import timber.log.Timber
 
@@ -33,6 +35,10 @@ class UsersAdapter(private val data: Data) : RecyclerView.Adapter<UserViewHolder
         root.setOnClickListener {
 
             Timber.v("Opening user: ${user.userId}")
+
+            val intent = Intent(root.context, PostsActivity::class.java)
+            intent.putExtra(PostsActivity.KEY_USER_ID, user.userId)
+            root.context.startActivity(intent)
         }
 
         Glide.with(image.context)

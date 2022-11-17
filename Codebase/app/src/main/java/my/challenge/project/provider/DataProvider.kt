@@ -5,12 +5,11 @@ import my.challenge.project.api.Api
 import my.challenge.project.api.Post
 import my.challenge.project.api.User
 import my.challenge.project.common.ObtainCallback
-import my.challenge.project.common.ObtainParametrized
 import my.challenge.project.common.ObtainParametrizedWithCallback
 
-class DataProvider : ObtainParametrizedWithCallback<Data, Context> {
+object DataProvider : ObtainParametrizedWithCallback<Data, Context> {
 
-    private val content = Data()
+    val userData = Data()
 
     override fun obtain(param: Context, callback: ObtainCallback<Data>) {
 
@@ -22,16 +21,16 @@ class DataProvider : ObtainParametrizedWithCallback<Data, Context> {
 
                 data.forEach { post ->
 
-                    var posts = content.posts[post.userId]
+                    var posts = userData.posts[post.userId]
                     if (posts == null) {
 
                         posts = mutableListOf()
-                        content.posts[post.userId] = posts
+                        userData.posts[post.userId] = posts
                     }
                     posts.add(post)
                 }
 
-                callback.onCompleted(content)
+                callback.onCompleted(userData)
             }
 
             override fun onFailure(error: Throwable) = callback.onFailure(error)
@@ -46,8 +45,8 @@ class DataProvider : ObtainParametrizedWithCallback<Data, Context> {
 
             override fun onCompleted(data: List<User>) {
 
-                content.users.clear()
-                content.users.addAll(data)
+                userData.users.clear()
+                userData.users.addAll(data)
                 getPosts()
             }
 
