@@ -2,6 +2,7 @@ package my.challenge.project
 
 import android.os.Bundle
 import androidx.appcompat.app.AppCompatActivity
+import my.challenge.project.adapter.UsersAdapter
 import my.challenge.project.api.Api
 import my.challenge.project.api.Post
 import my.challenge.project.api.User
@@ -41,6 +42,8 @@ class MainActivity : AppCompatActivity() {
     }
 
     private fun populateAdapter(data: Data) {
+
+        val adapter = UsersAdapter(data)
 
         // TODO:
     }
