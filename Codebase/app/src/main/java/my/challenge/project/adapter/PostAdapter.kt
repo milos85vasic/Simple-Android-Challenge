@@ -20,7 +20,11 @@ class PostAdapter(private val data: List<Post>) : RecyclerView.Adapter<PostViewH
 
         val post = data[position]
 
-        // TODO:
+        val body = holder.body
+        val title = holder.title
+
+        body.text = post.body
+        title.text = post.title
     }
 
     override fun getItemCount() = data.size
