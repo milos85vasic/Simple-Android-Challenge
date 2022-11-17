@@ -7,4 +7,10 @@
         <item name="android:textSize">@dimen/text_size</item>
         <item name="android:textColor">@color/brand_foreground</item>
     </style>
+
+    <style name="text_big" parent="text_default">
+
+        <item name="android:textSize">@dimen/text_size</item>
+        <item name="android:textColor">@color/brand_background</item>
+    </style>
 </resources>

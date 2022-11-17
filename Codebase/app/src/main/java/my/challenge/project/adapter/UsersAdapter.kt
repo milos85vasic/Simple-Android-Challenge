@@ -25,8 +25,10 @@ class UsersAdapter(private val data: Data) : RecyclerView.Adapter<UserViewHolder
         val root = holder.root
         val name = holder.name
         val image = holder.image
+        val count = holder.count
 
         name.text = user.name
+        count.text = data.posts[user.userId]?.size.toString()
 
         root.setOnClickListener {
 

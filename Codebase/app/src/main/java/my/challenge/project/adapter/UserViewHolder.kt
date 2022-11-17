@@ -10,5 +10,6 @@ class UserViewHolder (itemView: View) : RecyclerView.ViewHolder(itemView) {
 
     val root: View = itemView.findViewById(R.id.item)
     val name: TextView = itemView.findViewById(R.id.name)
+    val count: TextView = itemView.findViewById(R.id.count)
     val image: ImageView = itemView.findViewById(R.id.image)
 }
