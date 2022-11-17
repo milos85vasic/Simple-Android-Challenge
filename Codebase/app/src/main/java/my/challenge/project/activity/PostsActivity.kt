@@ -1,7 +1,9 @@
 package my.challenge.project.activity
 
 import android.os.Bundle
+import android.widget.ImageView
 import androidx.appcompat.app.AppCompatActivity
+import com.bumptech.glide.Glide
 import my.challenge.project.R
 import my.challenge.project.provider.DataProvider
 import timber.log.Timber
@@ -28,6 +30,21 @@ class PostsActivity : AppCompatActivity() {
 
             val data = DataProvider.userData
             val posts = data.posts[userId]
+            val user = data.userMap[userId]
+
+            if (user == null) {
+
+                Timber.e("No user available")
+                finish()
+                return
+            }
+
+            val image = findViewById<ImageView>(R.id.image)
+
+            Glide.with(image.context)
+                .load(user.thumbnailUrl)
+                .circleCrop()
+                .into(image)
 
             posts?.let {
 

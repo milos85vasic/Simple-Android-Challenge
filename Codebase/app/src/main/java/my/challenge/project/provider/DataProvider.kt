@@ -47,6 +47,12 @@ object DataProvider : ObtainParametrizedWithCallback<Data, Context> {
 
                 userData.users.clear()
                 userData.users.addAll(data)
+
+                userData.users.forEach {
+
+                    userData.userMap[it.userId] = it
+                }
+
                 getPosts()
             }
 
