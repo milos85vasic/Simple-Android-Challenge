@@ -8,6 +8,15 @@
     <androidx.recyclerview.widget.RecyclerView
         android:id="@+id/users"
         android:layout_width="match_parent"
-        android:layout_height="match_parent" />
+        android:layout_height="match_parent"
+        android:visibility="invisible" />
+
+    <TextView
+        android:id="@+id/empty_view"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:gravity="center"
+        android:text="@string/no_data_available"
+        android:textColor="@color/brand_foreground" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

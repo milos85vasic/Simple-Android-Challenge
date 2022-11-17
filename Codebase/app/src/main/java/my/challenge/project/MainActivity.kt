@@ -1,6 +1,7 @@
 package my.challenge.project
 
 import android.os.Bundle
+import android.view.View
 import androidx.appcompat.app.AppCompatActivity
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
@@ -45,8 +46,12 @@ class MainActivity : AppCompatActivity() {
 
     private fun populateAdapter(data: Data) {
 
+        val emptyView = findViewById<View>(R.id.empty_view)
         val usersView = findViewById<RecyclerView>(R.id.users)
         val linearLayoutManager = LinearLayoutManager(this)
+
+        emptyView.visibility = View.GONE
+        usersView.visibility = View.VISIBLE
 
         usersView.layoutManager = linearLayoutManager
         usersView.adapter = UsersAdapter(data)

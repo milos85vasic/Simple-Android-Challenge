@@ -1,5 +1,6 @@
 <resources>
 
     <string name="app_name">My Challenge Project</string>
+    <string name="no_data_available">No items in the list at the moment …</string>
     <string name="retrofit_endpoint" translatable="false">https://my-json-server.typicode.com/</string>
 </resources>
