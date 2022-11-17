@@ -3,6 +3,7 @@
 
     <style name="text_default">
 
+        <item name="android:layout_marginTop">@dimen/item_padding</item>
         <item name="android:layout_marginStart">@dimen/item_padding</item>
         <item name="android:textSize">@dimen/text_size</item>
         <item name="android:textColor">@color/brand_foreground</item>
@@ -10,6 +11,7 @@
 
     <style name="text_big" parent="text_default">
 
+        <item name="android:layout_marginTop">0dp</item>
         <item name="android:textSize">@dimen/text_size</item>
         <item name="android:textColor">@color/brand_background</item>
     </style>
