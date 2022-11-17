@@ -2,6 +2,8 @@ package my.challenge.project
 
 import android.os.Bundle
 import androidx.appcompat.app.AppCompatActivity
+import androidx.recyclerview.widget.LinearLayoutManager
+import androidx.recyclerview.widget.RecyclerView
 import my.challenge.project.adapter.UsersAdapter
 import my.challenge.project.api.Api
 import my.challenge.project.api.Post
@@ -43,8 +45,10 @@ class MainActivity : AppCompatActivity() {
 
     private fun populateAdapter(data: Data) {
 
-        val adapter = UsersAdapter(data)
+        val usersView = findViewById<RecyclerView>(R.id.users)
+        val linearLayoutManager = LinearLayoutManager(this)
 
-        // TODO:
+        usersView.layoutManager = linearLayoutManager
+        usersView.adapter = UsersAdapter(data)
     }
 }
