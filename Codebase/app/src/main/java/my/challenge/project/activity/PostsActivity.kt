@@ -46,8 +46,7 @@ class PostsActivity : AppCompatActivity() {
             val image = findViewById<ImageView>(R.id.image)
 
             Glide.with(image.context)
-                .load(user.thumbnailUrl)
-                .circleCrop()
+                .load(user.url)
                 .into(image)
 
             posts?.let {

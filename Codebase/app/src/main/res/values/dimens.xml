@@ -3,6 +3,7 @@
     <dimen name="text_size">22sp</dimen>
     <dimen name="text_size_big">25sp</dimen>
     <dimen name="image_size">100dp</dimen>
+    <dimen name="image_size_big">200dp</dimen>
     <dimen name="item_spacing">10dp</dimen>
     <dimen name="separator_width">2dp</dimen>
 </resources>
