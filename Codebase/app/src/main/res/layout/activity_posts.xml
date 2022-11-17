@@ -10,4 +10,10 @@
         android:layout_height="@dimen/image_size"
         android:layout_marginBottom="@dimen/item_spacing" />
 
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/posts"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:visibility="invisible" />
+
 </LinearLayout>

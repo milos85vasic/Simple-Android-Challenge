@@ -6,7 +6,7 @@ import androidx.appcompat.app.AppCompatActivity
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
 import my.challenge.project.R
-import my.challenge.project.adapter.UsersAdapter
+import my.challenge.project.adapter.UserAdapter
 import my.challenge.project.common.ObtainCallback
 import my.challenge.project.provider.Data
 import my.challenge.project.provider.DataProvider
@@ -52,6 +52,6 @@ class MainActivity : AppCompatActivity() {
         usersView.visibility = View.VISIBLE
 
         usersView.layoutManager = linearLayoutManager
-        usersView.adapter = UsersAdapter(data)
+        usersView.adapter = UserAdapter(data)
     }
 }

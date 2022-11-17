@@ -10,7 +10,7 @@ import my.challenge.project.activity.PostsActivity
 import my.challenge.project.provider.Data
 import timber.log.Timber
 
-class UsersAdapter(private val data: Data) : RecyclerView.Adapter<UserViewHolder>() {
+class UserAdapter(private val data: Data) : RecyclerView.Adapter<UserViewHolder>() {
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): UserViewHolder {
 

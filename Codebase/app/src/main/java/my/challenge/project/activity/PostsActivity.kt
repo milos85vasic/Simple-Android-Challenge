@@ -1,10 +1,14 @@
 package my.challenge.project.activity
 
 import android.os.Bundle
+import android.view.View
 import android.widget.ImageView
 import androidx.appcompat.app.AppCompatActivity
+import androidx.recyclerview.widget.LinearLayoutManager
+import androidx.recyclerview.widget.RecyclerView
 import com.bumptech.glide.Glide
 import my.challenge.project.R
+import my.challenge.project.adapter.PostAdapter
 import my.challenge.project.provider.DataProvider
 import timber.log.Timber
 
@@ -49,6 +53,13 @@ class PostsActivity : AppCompatActivity() {
             posts?.let {
 
                 Timber.v("Posts count: ${it.size}")
+
+                val postsView = findViewById<RecyclerView>(R.id.posts)
+                val linearLayoutManager = LinearLayoutManager(this)
+
+                postsView.visibility = View.VISIBLE
+                postsView.layoutManager = linearLayoutManager
+                postsView.adapter = PostAdapter(it)
             }
         }
     }
