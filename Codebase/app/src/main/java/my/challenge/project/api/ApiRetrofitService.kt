@@ -13,7 +13,6 @@ interface ApiRetrofitService {
         override fun obtain(param: RetrofitApiParameters): ApiRetrofitService =
             RetrofitProvider.obtain(param)
                 .create(ApiRetrofitService::class.java)
-
     }
 
     @GET("SharminSirajudeen/test_resources/posts")

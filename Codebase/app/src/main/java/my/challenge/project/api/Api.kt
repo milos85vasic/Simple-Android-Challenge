@@ -4,9 +4,9 @@ import android.content.Context
 import com.google.gson.stream.MalformedJsonException
 import my.challenge.project.common.ObtainCallback
 import my.challenge.project.connectivity.Connectivity
+import my.challenge.project.connectivity.ConnectivityCheck
 import my.challenge.project.execution.TaskExecutor
 import my.challenge.project.retrofit.RetrofitApiParameters
-import my.challenge.project.connectivity.ConnectivityCheck
 import java.io.IOException
 
 class Api(private val connectivity: ConnectivityCheck = Connectivity()) {

@@ -1,7 +1,7 @@
 package my.challenge.project
 
-import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import androidx.appcompat.app.AppCompatActivity
 import my.challenge.project.api.Api
 import my.challenge.project.api.Post
 import my.challenge.project.api.User
