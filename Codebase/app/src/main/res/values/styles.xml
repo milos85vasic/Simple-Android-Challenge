@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <style name="text_default">
+
+        <item name="android:layout_marginStart">@dimen/item_padding</item>
+        <item name="android:textSize">@dimen/text_size</item>
+        <item name="android:textColor">@color/brand_foreground</item>
+    </style>
+</resources>

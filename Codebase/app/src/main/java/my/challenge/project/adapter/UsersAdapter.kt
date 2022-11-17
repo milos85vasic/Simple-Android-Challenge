@@ -23,7 +23,10 @@ class UsersAdapter(private val data: Data) : RecyclerView.Adapter<UserViewHolder
         val user = data.users[position]
 
         val root = holder.root
+        val name = holder.name
         val image = holder.image
+
+        name.text = user.name
 
         root.setOnClickListener {
 
