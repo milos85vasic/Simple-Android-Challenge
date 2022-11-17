@@ -19,6 +19,11 @@ class MainActivity : AppCompatActivity() {
             if (!isFinishing) {
 
                 Timber.v("Data has been obtained")
+
+                runOnUiThread {
+
+                    populateAdapter(data)
+                }
             }
         }
 
@@ -33,5 +38,10 @@ class MainActivity : AppCompatActivity() {
 
         setContentView(R.layout.activity_main)
         DataProvider().obtain(this, dataCallback)
+    }
+
+    private fun populateAdapter(data: Data) {
+
+        // TODO:
     }
 }
